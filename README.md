@@ -2,7 +2,7 @@
 
 Personal portfolio website for **Kamakor Code**, a full-stack web developer based in Phnom Penh, Cambodia, specialising in Angular, AngularJS, and MS SQL Server 2016.
 
-Live site: [www.loemheng.com](https://www.loemheng.com)
+Live site: [https://kamakor-code-portfolio.vercel.app/](https://kamakor-code-portfolio.vercel.app/)
 
 ---
 
@@ -53,7 +53,7 @@ A single-page portfolio built with vanilla HTML, CSS, and JavaScript. Designed t
 | Markup     | HTML5 (semantic, accessible)            |
 | Styling    | CSS3 / SCSS                             |
 | Scripting  | Vanilla JavaScript (ES6+)               |
-| Fonts      | Google Fonts — Syne + DM Mono          |
+| Fonts      | Google Fonts — Syne + DM Mono           |
 | Hosting    | Any static host (Netlify, Vercel, etc.) |
 
 ---
@@ -149,7 +149,7 @@ site.webmanifest
 No build step required. Clone and open locally:
 
 ```bash
-git clone https://github.com/kamakorcode/portfolio.git
+git clone git@github.com:hengftl/kamakor-code-portfolio.git
 cd portfolio
 
 # Open directly in browser
@@ -196,4 +196,4 @@ Upload all files via FTP to your `public_html` directory. Ensure `index.html` is
 ## License
 
 © 2026 Kamakor Code. All rights reserved.  
-Designed and built by Kamakor Code · Phnom Penh, Cambodia.
+Designed and built by Kamakor Code.
