@@ -30,14 +30,23 @@ A single-page portfolio built with vanilla HTML, CSS, and JavaScript. Designed t
 
 ```
 /
-├── index.html          # Main HTML file (SEO-enhanced)
-├── css/
-│   └── style.css       # All styles
-├── js/
-│   └── script.js       # Scroll reveal and interactions
-├── images/
-│   ├── og-cover.jpg    # Open Graph cover image (1200×630 px)
-│   └── kamakor-code.jpg# Profile photo for structured data
+├── index.html
+├── assets/
+|   ├── fonts/
+│   │   └── DM Mono
+│   │   └── Syne
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│       ├── og-cover.jpg      # Open Graph cover image (1200×630 px)
+│       └── kamakor-code.jpg
+├── documentation/
+│   └── index.html
+├── Licensing/
+│       ├── GPL.txt
+│       └── License.txt
 ├── favicon-32x32.png
 ├── favicon-16x16.png
 ├── apple-touch-icon.png
