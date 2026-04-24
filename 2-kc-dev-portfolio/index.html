@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Kamakor Code – Portfolio Website | Full-Stack Developer HTML Template</title>
+    <meta name="description"
+        content="Kamakor Code – modern, SEO-optimised personal portfolio HTML template for full-stack developers. Angular, MS SQL Server, vanilla stack, ready for ThemeForest.">
+    <meta name="keywords"
+        content="portfolio template, developer portfolio, angular portfolio, full-stack html template, ThemeForest item, kamakor code, MS SQL, vanilla js portfolio">
+    <meta name="author" content="Kamakor Code">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kamakor-code-portfolio.vercel.app/">
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kamakor-code-portfolio.vercel.app/">
+    <meta property="og:title" content="Kamakor Code – Full-Stack Portfolio">
+    <meta property="og:description"
+        content="Professional portfolio of Kamakor Code, Angular & MS SQL expert based in Phnom Penh. Clean, fast, developer-first HTML/CSS/JS template.">
+    <meta property="og:image" content="assets/images/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kamakor Code Portfolio - Angular, MS SQL Server 2016 specialist">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Kamakor Code">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kamakor Code – Full-Stack Dev Portfolio">
+    <meta name="twitter:description"
+        content="Lightning fast vanilla portfolio template with JSON-LD, geo tags, perfect Lighthouse scores.">
+    <meta name="twitter:image" content="assets/images/og-cover.jpg">
+    <!-- GEO tags for regional relevance -->
+    <meta name="geo.region" content="KH-12">
+    <meta name="geo.placename" content="Phnom Penh">
+    <meta name="geo.position" content="11.556374;104.928219">
+    <meta name="ICBM" content="11.556374, 104.928219">
+    <!-- DNS prefetch & performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <!-- Fonts + Preconnect -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- JSON-LD Structured Data: Person, WebSite, ItemList (projects) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kamakor Code",
+    "url": "https://kamakor-code-portfolio.vercel.app/",
+    "image": "assets/images/kamakor-code.jpg",
+    "jobTitle": "Full-Stack Web Developer",
+    "email": "kamakor@kamakorcode.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Phnom Penh",
+      "addressCountry": "Cambodia"
+    },
+    "knowsAbout": ["Angular", "AngularJS", "MS SQL Server 2016", "JavaScript", "TypeScript", "Node.js", "Tailwind CSS"],
+    "sameAs": [
+      "https://github.com/kamakorcode",
+      "https://linkedin.com/in/kamakorcode",
+      "https://twitter.com/kamakorcode"
+    ]
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Kamakor Code Portfolio",
+    "url": "https://kamakor-code-portfolio.vercel.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://kamakor-code-portfolio.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Featured Projects",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://kamakor-code-portfolio.vercel.app/#project-angular-dashboard",
+        "name": "Angular Fleet Manager"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://kamakor-code-portfolio.vercel.app/#project-ms-sql-analytics",
+        "name": "MS SQL Analytics Platform"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://kamakor-code-portfolio.vercel.app/#project-legacy-migration",
+        "name": "AngularJS to Angular Migration"
+      }
+    ]
+  }
+  </script>
+    <style>
+        /* ----------------------------- */
+        /* RESET & GLOBAL VARIABLES      */
+        /* ----------------------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0a0c10;
+            --surface: #11141c;
+            --card-bg: #151e2a;
+            --primary: #5d9eff;
+            --primary-glow: #3a7bd5;
+            --accent: #7e57c2;
+            --text-light: #f0f3fa;
+            --text-muted: #9aa7c2;
+            --border-dim: #232a3a;
+            --font-syne: 'Syne', sans-serif;
+            --font-mono: 'DM Mono', monospace;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: var(--font-syne);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff, var(--primary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 6px solid var(--primary);
+            padding-left: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border-dim);
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #0a0c10;
+            box-shadow: 0 8px 20px rgba(93, 158, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-glow);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(93, 158, 255, 0.3);
+        }
+
+        .btn-outline {
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #0a0c10;
+            border-color: transparent;
+        }
+
+        /* Stats row */
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin: 2.5rem 0 0;
+        }
+
+        .stat-item {
+            font-family: var(--font-mono);
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            border-radius: 28px;
+            padding: 1.8rem;
+            transition: var(--transition);
+            border: 1px solid var(--border-dim);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-article {
+            background: var(--surface);
+            border-radius: 32px;
+            padding: 1.8rem;
+            transition: var(--transition);
+            border: 1px solid var(--border-dim);
+            height: 100%;
+        }
+
+        .project-article:hover {
+            border-color: var(--accent);
+            background: #141d2b;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: rgba(93, 158, 255, 0.15);
+            color: var(--primary);
+            border-radius: 40px;
+            padding: 0.25rem 1rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            font-family: var(--font-mono);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact & footer */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            border-bottom: 1px dashed var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .contact-links a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+        }
+
+        /* Hero underline accent */
+        .hero-highlight {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Accessibility focus */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 4px;
+        }
+
+        [aria-hidden="true"] {
+            user-select: none;
+        }
+    </style>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="stats" aria-label="developer statistics">
+                    <div class="stat-item"><span class="stat-number" id="yearsCount">5+</span> <span>Years
+                            Experience</span></div>
+                    <div class="stat-item"><span class="stat-number" id="projectsCount">25+</span> <span>Projects
+                            Delivered</span></div>
+                    <div class="stat-item"><span class="stat-number">100%</span> <span>Client Satisfaction</span></div>
+                </div>
+                <h1 id="hero-heading">Kamakor Code <span aria-hidden="true">⚡</span><br>Full-stack <span
+                        class="hero-highlight">precision</span></h1>
+                <p style="font-size: 1.25rem; margin-top: 1rem; max-width: 700px; color: var(--text-muted);">Angular •
+                    AngularJS • MS SQL Server 2016 — Based in Phnom Penh, Cambodia.</p>
+                <div class="btn-group">
+                    <a href="#projects" class="btn btn-primary" aria-label="View featured projects">✨ Explore work</a>
+                    <a href="#contact" class="btn btn-outline" aria-label="Contact Kamakor Code">📬 Contact me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading">About / DNA</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+                    <div style="flex: 2; min-width: 240px;">
+                        <p style="font-size: 1.1rem; margin-bottom: 1rem;">I'm <strong>Kamakor Code</strong>, a
+                            full-stack architect obsessed with clean UIs and robust database engineering. With
+                            <strong>Angular, AngularJS, and MS SQL Server 2016</strong> at my core, I build
+                            enterprise-grade web solutions that scale.
+                        </p>
+                        <p style="color: var(--text-muted);">📍 Phnom Penh, Cambodia — working with global startups and
+                            agencies. I merge performance, accessibility, and modern developer experience.</p>
+                        <div class="contact-links" style="margin-top: 1.5rem;">
+                            <a href="mailto:kamakor@kamakorcode.com" aria-label="Send email">📧
+                                kamakor@kamakorcode.com</a>
+                            <a href="#" target="_blank" rel="noopener" aria-label="GitHub profile">🐙 GitHub</a>
+                            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">🔗 LinkedIn</a>
+                        </div>
+                    </div>
+                    <div
+                        style="flex: 1; background: var(--card-bg); border-radius: 2rem; padding: 1.5rem; border: 1px solid var(--border-dim);">
+                        <div class="skill-icon" aria-hidden="true">🧑‍💻</div>
+                        <h3>Core Stack</h3>
+                        <ul
+                            style="list-style: none; margin-top: 0.8rem; font-family: var(--font-mono); font-size: 0.85rem;">
+                            <li>✓ Angular (v12+) / AngularJS</li>
+                            <li>✓ MS SQL Server 2016 (T-SQL)</li>
+                            <li>✓ Node.js / Express</li>
+                            <li>✓ Tailwind / SCSS</li>
+                            <li>✓ REST APIs, JWT, Azure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section" aria-labelledby="skills-heading">
+            <div class="container">
+                <h2 id="skills-heading">Specialisation ⚙️</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">🅰️</div>
+                        <h3>Frontend Mastery</h3>
+                        <p>Angular, RxJS, AngularJS, TypeScript, reactive UIs, component-driven architecture.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">🗄️</div>
+                        <h3>Database Engineering</h3>
+                        <p>MS SQL Server 2016, stored procedures, indexing, query optimisation, SSIS.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">⚙️</div>
+                        <h3>Backend & API</h3>
+                        <p>Node.js, .NET Core, RESTful APIs, authentication, cloud deployment (Vercel/Azure).</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">🧰</div>
+                        <h3>Dev Toolchain</h3>
+                        <p>Git, Webpack, npm, Docker, CI/CD, Figma, performance audits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (ItemList semantic) -->
+        <section id="projects" class="section" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading">Featured Engineering ✨</h2>
+                <div class="projects-grid">
+                    <article class="project-article" id="project-angular-dashboard">
+                        <span class="project-tag">Angular • Material</span>
+                        <h3>Angular Fleet Manager</h3>
+                        <p>Real-time fleet dashboard with lazy-loaded modules, dynamic forms, and MS SQL backend.
+                            Optimised query performance for 50k+ records.</p>
+                        <div style="margin-top: 1rem;"><a href="#" style="color: var(--primary); text-decoration: none;"
+                                aria-label="Case study: Angular Fleet Manager">Live demo →</a></div>
+                    </article>
+                    <article class="project-article" id="project-ms-sql-analytics">
+                        <span class="project-tag">MS SQL 2016 • Analytics</span>
+                        <h3>Sales Intelligence Platform</h3>
+                        <p>Designed star-schema data warehouse, advanced stored procedures, and power bi integration.
+                            Reduced report load time by 73%.</p>
+                        <div style="margin-top: 1rem;"><a href="#" style="color: var(--primary); text-decoration: none;"
+                                aria-label="Case study: MS SQL Analytics">Case study →</a></div>
+                    </article>
+                    <article class="project-article" id="project-legacy-migration">
+                        <span class="project-tag">AngularJS → Angular</span>
+                        <h3>Legacy Migration Factory</h3>
+                        <p>Enterprise AngularJS to Angular 14 hybrid migration, improving performance and
+                            maintainability for a financial CRM.</p>
+                        <div style="margin-top: 1rem;"><a href="#" style="color: var(--primary); text-decoration: none;"
+                                aria-label="Case study: Migration">Read more →</a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading">Let’s connect</h2>
+                <p style="max-width: 650px; margin-bottom: 1.5rem;">I'm available for remote contracts, full-stack
+                    collaborations, and Angular/MS SQL consulting. Reach out and let's build something great.</p>
+                <div class="contact-links">
+                    <a href="mailto:kamakor@kamakorcode.com" aria-label="Email Kamakor">📧 kamakor@kamakorcode.com</a>
+                    <a href="#" target="_blank" aria-label="GitHub">🐙 GitHub / kamakorcode</a>
+                    <a href="#" target="_blank" aria-label="LinkedIn">💼 LinkedIn / kamakorcode</a>
+                    <a href="#" target="_blank" aria-label="Twitter/X">🐦 X / @kamakorcode</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>© 2026 Kamakor Code — Full-Stack Portfolio. Built with vanilla HTML/CSS/JS, zero bloat. <br> All
+                    rights reserved. ThemeForest-ready documentation & semantic structure.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Vanilla JavaScript: counters, smooth scroll, lightweight interactions -->
+    <script defer>
+        (function () {
+            // Smooth scroll for anchor links (accessibility + ux)
+            document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // update URL hash without jumping
+                        history.pushState(null, null, `#${targetId}`);
+                    }
+                });
+            });
+
+            // Animated counter (yearsCount & projectsCount) on viewport entrance
+            const yearsSpan = document.getElementById('yearsCount');
+            const projectsSpan = document.getElementById('projectsCount');
+            let animated = false;
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight - 100 && rect.bottom > 0;
+            }
+
+            function animateNumbers() {
+                if (animated) return;
+                if (!yearsSpan || !projectsSpan) return;
+                if (isElementInViewport(yearsSpan)) {
+                    animated = true;
+                    // years: start 0 -> 5+
+                    let startYears = 0;
+                    let endYears = 5;
+                    let startProjects = 0;
+                    let endProjects = 25;
+                    const duration = 1200;
+                    const stepTime = 20;
+                    let steps = duration / stepTime;
+                    let stepYears = (endYears - startYears) / steps;
+                    let stepProjects = (endProjects - startProjects) / steps;
+                    let currentYears = startYears;
+                    let currentProjects = startProjects;
+                    let count = 0;
+                    const timer = setInterval(() => {
+                        count++;
+                        currentYears = Math.min(endYears, currentYears + stepYears);
+                        currentProjects = Math.min(endProjects, currentProjects + stepProjects);
+                        if (yearsSpan) yearsSpan.innerText = Math.floor(currentYears) + '+';
+                        if (projectsSpan) projectsSpan.innerText = Math.floor(currentProjects) + '+';
+                        if (count >= steps) {
+                            yearsSpan.innerText = endYears + '+';
+                            projectsSpan.innerText = endProjects + '+';
+                            clearInterval(timer);
+                        }
+                    }, stepTime);
+                }
+            }
+
+            // trigger on scroll and load
+            window.addEventListener('scroll', animateNumbers);
+            window.addEventListener('load', animateNumbers);
+            animateNumbers(); // immediate if visible
+
+            // additional interactive console greeting (dev awareness)
+            console.log('Kamakor Code portfolio — SEO structured, JSON-LD enabled, vanilla performance');
+        })();
+    </script>
+
+    <!-- static note: ensure all asset placeholders for themeforest compatibility
+     Images not bundled but documentation references og-cover.jpg, kamakor-code.jpg, favicons -->
+</body>
+
+</html>

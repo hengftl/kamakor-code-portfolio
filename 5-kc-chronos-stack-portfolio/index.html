@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronos Stack | Career timeline portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            background: #0f1219;
+            color: #eef2ff;
+            font-family: 'Onest', sans-serif
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 600
+        }
+
+        .header p {
+            color: #8f9bb3;
+            margin-top: 0.5rem
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 3rem 0
+        }
+
+        .timeline-card {
+            background: #171c27;
+            border-radius: 24px;
+            padding: 1.5rem;
+            border-left: 4px solid #3b82f6;
+            transition: 0.2s
+        }
+
+        .timeline-card:hover {
+            background: #1f2533;
+            transform: translateX(8px)
+        }
+
+        .year {
+            font-family: monospace;
+            color: #60a5fa;
+            font-weight: 600
+        }
+
+        .role {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0.3rem 0
+        }
+
+        .skillset {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem
+        }
+
+        .skill-tag {
+            background: #1e293b;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #cbd5e1
+        }
+
+        .grid-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            background: #0b0f17;
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center
+        }
+
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3b82f6
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            padding-top: 2rem
+        }
+
+        @media(max-width:700px) {
+            .grid-stats {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Chronos Stack<span style="color:#3b82f6">.</span></h1>
+            <p>Full-stack engineer · 10+ years shaping digital products · Lead architect & mentor</p>
+            <div style="margin-top:1.5rem"><a href="#"
+                    style="background:#3b82f6;color:white;padding:0.7rem 1.8rem;border-radius:40px;text-decoration:none;display:inline-block">📄
+                    Resume (PDF)</a></div>
+        </div>
+        <div class="grid-stats">
+            <div>
+                <div class="stat-num">30+</div>
+                <div>Projects Shipped</div>
+            </div>
+            <div>
+                <div class="stat-num">12</div>
+                <div>Enterprise Clients</div>
+            </div>
+            <div>
+                <div class="stat-num">7</div>
+                <div>Tech Stack Masteries</div>
+            </div>
+        </div>
+        <div>
+            <h2 style="margin:1.5rem 0 1rem">⚡ Career timeline</h2>
+            <div class="timeline">
+                <div class="timeline-card">
+                    <div class="year">2023 – Present</div>
+                    <div class="role">Principal Engineer @ Hyperion AI</div>
+                    <p>Leading LLM infrastructure, real-time data pipelines, team of 8 developers.</p>
+                    <div class="skillset"><span class="skill-tag">Python</span><span
+                            class="skill-tag">Kubernetes</span><span class="skill-tag">FastAPI</span><span
+                            class="skill-tag">React</span></div>
+                </div>
+                <div class="timeline-card">
+                    <div class="year">2019 – 2023</div>
+                    <div class="role">Senior Full-Stack Developer · Stellar Commerce</div>
+                    <p>Scalable e-commerce platform, migrated monolith to microservices (100k+ orders/month).</p>
+                    <div class="skillset"><span class="skill-tag">Node.js</span><span
+                            class="skill-tag">GraphQL</span><span class="skill-tag">PostgreSQL</span><span
+                            class="skill-tag">AWS</span></div>
+                </div>
+                <div class="timeline-card">
+                    <div class="year">2015 – 2019</div>
+                    <div class="role">Frontend Architect · CreativeDot</div>
+                    <p>Design systems, component library adoption, mentoring juniors.</p>
+                    <div class="skillset"><span class="skill-tag">Vue.js</span><span
+                            class="skill-tag">Webpack</span><span class="skill-tag">Storybook</span><span
+                            class="skill-tag">Jest</span></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2 style="margin:2rem 0 0.8rem">📌 Core stacks & tools</h2>
+            <div class="skillset" style="gap:0.8rem;margin-bottom:1rem"><span class="skill-tag">TypeScript</span><span
+                    class="skill-tag">React/Next</span><span class="skill-tag">Node/Nest</span><span
+                    class="skill-tag">MongoDB</span><span class="skill-tag">Tailwind</span><span
+                    class="skill-tag">Docker</span><span class="skill-tag">GitHub Actions</span></div>
+        </div>
+        <footer>📍 Berlin / Remote · contact@chronosstack.dev · open for collaborations & speaking</footer>
+    </div>
+</body>
+
+</html>

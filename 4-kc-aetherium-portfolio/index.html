@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KC Aetherium | Minimalist Dev Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            background: #faf9f8;
+            color: #1e1e2a;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem
+        }
+
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid #e2e2e0
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+            justify-content: flex-end
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c2c3a;
+            font-weight: 500
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            min-height: 80vh;
+            align-items: center
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1
+        }
+
+        .badge {
+            background: #ececec;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1e1e2a;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0
+        }
+
+        .work-item {
+            border-bottom: 2px solid #e2e2e0;
+            padding-bottom: 1rem;
+            transition: 0.2s
+        }
+
+        .work-item:hover {
+            border-bottom-color: #1e1e2a
+        }
+
+        .work-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem
+        }
+
+        footer {
+            margin: 5rem 0 2rem;
+            text-align: center;
+            color: #6c6c7a
+        }
+
+        @media(max-width:800px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+            <div class="logo">AETHERIUM // code studio</div>
+            <nav><a href="#">Work</a><a href="#">Services</a><a href="#">Insights</a><a href="#">Connect</a></nav>
+        </header>
+        <div class="hero">
+            <div>
+                <div class="badge">✦ Product-led engineering ✦</div>
+                <h1>Crafting digital<br>experiences with<br>precision.</h1>
+                <p style="margin:1rem 0;color:#4a4a5a">Full-stack development, design systems, and scalable cloud
+                    architecture.</p><a href="#" class="btn">View portfolio →</a>
+            </div>
+            <div style="background:#eaeaea;padding:2rem;border-radius:32px">
+                <p style="font-weight:600">"Clean code, thoughtful interfaces, and human-centric performance." —
+                    Aetherium</p>
+                <div style="margin-top:1rem;display:flex;gap:1rem">
+                    <span>React</span><span>Python</span><span>Postgres</span><span>Vue</span></div>
+            </div>
+        </div>
+        <div>
+            <h2 style="font-size:2rem;margin:3rem 0 1.5rem">Selected projects</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <h3>Studio Lumina</h3>
+                    <p>Creative agency platform + headless CMS with blazing SEO metrics</p><span
+                        style="font-size:0.8rem;color:#6c6c7a">Next.js · Sanio · Framer</span>
+                </div>
+                <div class="work-item">
+                    <h3>Verdant Finance</h3>
+                    <p>Investment dashboard for ESG funds, real-time analytics + forecasting</p><span
+                        style="font-size:0.8rem;color:#6c6c7a">Django · D3 · AWS</span>
+                </div>
+                <div class="work-item">
+                    <h3>Nomad Interior</h3>
+                    <p>3D configurator + inventory system for luxury furniture brand</p><span
+                        style="font-size:0.8rem;color:#6c6c7a">Three.js · Shopify · Node</span>
+                </div>
+            </div>
+        </div>
+        <footer>© 2026 Aetherium — minimal, meaningful, made with intent.<br>hello@aetherium.dev</footer>
+    </div>
+</body>
+
+</html>
